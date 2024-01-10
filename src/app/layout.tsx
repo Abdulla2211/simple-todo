@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import CustomProvider from '@/redux/provider';
+import { Setup } from '@/services';
 
 config.autoAddCss = false;
 const inter = Inter({ subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'] });
@@ -66,7 +68,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru-RU">
       <body className={inter.className}>
-        <CustomLayout>{children}</CustomLayout>
+        <CustomProvider>
+          <CustomLayout>{children}</CustomLayout>
+          <Setup />
+        </CustomProvider>
       </body>
     </html>
   );

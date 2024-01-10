@@ -34,12 +34,13 @@
       border: 0.2em solid $button-color-primary-1;
       color: $button-color-primary;
       border-radius: 50%;
-      z-index: 1;
+      transition: all 0.3s linear;
+      cursor: pointer;
+
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      transition: all 0.3s linear;
 
       &:hover {
         @media #{$mouse-device} {
@@ -60,8 +61,6 @@
         font-size: 2em;
         background-color: $bg-color-white;
         border-radius: 50%;
-
-        cursor: pointer;
       }
     }
   }

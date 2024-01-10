@@ -1,1 +1,2 @@
-export { default as TodoList } from './TodoList.tsx';
+import TodoList from './TodoList';
+export default TodoList;
