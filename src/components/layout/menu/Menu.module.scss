@@ -1,0 +1,68 @@
+@import '@/styles/main';
+
+.nav {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  bottom: 1.5em;
+
+  display: grid;
+  justify-items: center;
+
+  .container {
+    padding: 0.5em;
+    position: relative;
+
+    &::before {
+      @include border-shadow-1;
+      content: '';
+
+      width: 6em;
+      height: 2em;
+      background-color: $bg-color-white;
+      border: 0.1em solid $border-color-primary;
+      border-radius: 2em;
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .button {
+      padding: 0.2em;
+      border: 0.2em solid $button-color-primary-1;
+      color: $button-color-primary;
+      border-radius: 50%;
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s linear;
+
+      &:hover {
+        @media #{$mouse-device} {
+          color: $button-color-primary-1;
+        }
+      }
+
+      &:focus {
+        border-color: $focus-color-primary;
+      }
+
+      &:active {
+        color: $button-color-primary;
+        border-color: $button-color-primary-1;
+      }
+
+      .icon {
+        font-size: 2em;
+        background-color: $bg-color-white;
+        border-radius: 50%;
+
+        cursor: pointer;
+      }
+    }
+  }
+}

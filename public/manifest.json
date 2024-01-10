@@ -1,0 +1,10 @@
+{
+  "short_name": "SimpleTodo",
+  "name": "Simple Todo Application",
+  "description": "Simple tasks management application",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1f618d",
+  "background_color": "#1f618d"
+}
