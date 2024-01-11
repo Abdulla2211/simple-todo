@@ -4,12 +4,12 @@ import styles from './Menu.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { useAppDispatch } from '@/redux/hooks';
-import { handleSetShowCreateTodoForm } from '@/redux/features/todos/commonTodosSlice';
+import { handleSetShowTodoForm } from '@/redux/features/todos/todoFormSlice';
 
 const Menu = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const openTodoForm = () => {
-    dispatch(handleSetShowCreateTodoForm(true));
+    dispatch(handleSetShowTodoForm({ isShowTodoForm: true }));
   };
   return (
     <nav className={styles.nav}>

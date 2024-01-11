@@ -12,6 +12,8 @@ const inter = Inter({ subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'
 const appTitle = `SimpleTodo`;
 const appDescription = 'Simple tasks management application';
 const author = 'Magametov Abdulla';
+const appUrl = `${process.env.PROJECT_URL}`;
+const logoUrl = '/assets/logo';
 
 export const viewport = {
   width: 'device-width',
@@ -62,6 +64,11 @@ export const metadata: Metadata = {
   other: {
     'view-transition': 'same-origin',
   },
+  icons: {
+    icon: `${logoUrl}/favicon.ico`,
+    shortcut: `${logoUrl}/favicon.ico`,
+  },
+  assets: [`${appUrl}/assets`],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -69,8 +76,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru-RU">
       <body className={inter.className}>
         <CustomProvider>
-          <CustomLayout>{children}</CustomLayout>
           <Setup />
+          <CustomLayout>{children}</CustomLayout>
         </CustomProvider>
       </body>
     </html>

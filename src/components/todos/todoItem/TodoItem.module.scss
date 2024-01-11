@@ -9,9 +9,83 @@
 
   scroll-snap-align: center;
 
+  display: grid;
+  gap: 0.5em;
+
   &:hover {
     @media #{$mouse-device} {
       @include border-shadow-1;
     }
   }
+
+  &__dates {
+    font-size: 0.7em;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+
+    &__container {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 0.3em;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+
+  &__description {
+    font-size: 0.8em;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__status {
+      font-size: 0.8em;
+      font-weight: 600;
+      padding: 0.3em;
+      border-radius: 0.5em;
+      color: $text-color-white;
+    }
+
+    &__container {
+      display: grid;
+      gap: 1em;
+      grid-auto-flow: column;
+      align-items: center;
+
+      &__icon {
+        cursor: pointer;
+        border: 0.1em solid transparent;
+        padding: 0.3em;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all 0.3s linear;
+        &:hover {
+          @media #{$mouse-device} {
+            background-color: $bg-color-black-5;
+          }
+        }
+
+        &:focus {
+          border-color: $focus-color-primary;
+        }
+      }
+    }
+  }
+}
+
+.pending {
+  background-color: $bg-color-primary;
+}
+.process {
+  background-color: $bg-color-secondary;
+}
+.complete {
+  background-color: $bg-color-tertiary;
 }

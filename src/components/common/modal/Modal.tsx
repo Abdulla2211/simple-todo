@@ -35,7 +35,7 @@ const Modal: React.FC<ModalTypes> = ({ title, isShow, onClose, children }) => {
       <div className={styles.background} onClick={onClose}>
         <div className={styles.content} onClick={(e) => e.stopPropagation()}>
           <div className={styles.head}>
-            <span className={styles.title}>{title}</span>
+            <h1 className={styles.title}>{title}</h1>
             <button type="button" className={styles.button} onClick={onClose}>
               <FontAwesomeIcon icon={faCircleXmark} className={styles.icon} />
             </button>

@@ -6,4 +6,26 @@
   & button {
     margin-top: 1em;
   }
+
+  &__info {
+    padding-bottom: 0.2em;
+    font-size: 0.6em;
+
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: auto 1fr;
+    justify-content: baseline;
+    justify-items: baseline;
+    align-items: center;
+    width: 100%;
+
+    span {
+      &:first-child {
+        border-radius: 50%;
+        width: 1em;
+        height: 1em;
+        background-color: $warning-color-secondary;
+      }
+    }
+  }
 }

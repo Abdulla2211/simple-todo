@@ -55,6 +55,9 @@
     }
   }
 }
+.required {
+  border-color: $warning-color-secondary;
+}
 .focus {
   border-radius: 0.5em;
 

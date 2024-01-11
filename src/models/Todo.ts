@@ -6,8 +6,8 @@ mongoose.Promise = global.Promise;
 const todoSchema = new Schema(
   {
     name: String,
-    status: String,
     description: String,
+    status: String,
   },
   {
     timestamps: true,

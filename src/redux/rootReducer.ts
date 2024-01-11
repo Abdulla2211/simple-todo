@@ -1,10 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { apiSlice } from './services/apiSlice';
-import commonTodosReducer from './features/todos/commonTodosSlice';
+import todoFormReducer from './features/todos/todoFormSlice';
 
 const rootReducer = combineReducers({
   [apiSlice.reducerPath]: apiSlice.reducer,
-  commonTodos: commonTodosReducer,
+  todoForm: todoFormReducer,
 });
 
 export default rootReducer;

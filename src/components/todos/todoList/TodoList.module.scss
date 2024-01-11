@@ -1,5 +1,16 @@
 @import '@/styles/main';
 
+.empty {
+  height: 100%;
+  margin: 0 auto;
+  color: $text-color-gray;
+  font-weight: 600;
+  user-select: none;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
 .list {
   @include scroll-1;
   justify-self: center;

@@ -17,6 +17,7 @@ const Input = ({
   name,
   handleChange,
   className,
+  required,
   ...props
 }: Props): JSX.Element => {
   const [isOnFocus, setOnFocus] = useState(false);
@@ -35,7 +36,12 @@ const Input = ({
   };
 
   return (
-    <div className={cn(styles.container, { [styles.focus]: isOnFocus })}>
+    <div
+      className={cn(
+        styles.container,
+        { [styles.focus]: isOnFocus },
+        { [styles.required]: required && !value },
+      )}>
       <div className={styles.container__wrapper}>
         {label && (
           <label
@@ -55,6 +61,7 @@ const Input = ({
           onChange={onChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          required={required}
           {...props}
         />
       </div>
