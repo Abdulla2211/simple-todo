@@ -32,10 +32,16 @@ $text-color-gray: rgb(112, 112, 112);
 $text-color-primary: #333333;
 
 // Цвета кнопок
-$button-color-white: rgb(255, 255, 255);
-$button-color-white-1: rgb(240, 240, 240);
+$button-color-white: rgb(255 255 255);
+$button-color-white-1: rgb(235 235 235);
+$button-color-black: rgb(0 0 0);
+$button-color-black-1: rgb(60 60 60);
 $button-color-primary: #0070f3;
 $button-color-primary-1: rgb(26, 97, 179);
+$button-color-secondary: #606f7c;
+$button-color-secondary-1: #394149;
+$button-color-tertiary: #17a2b8;
+$button-color-tertiary-1: #10707e;
 
 // Цвета границ
 $border-color-primary: #e2e2e2;
@@ -43,3 +49,6 @@ $border-color-primary-1: #d4d4d4;
 
 // Цвета выделения
 $focus-color-primary: #ff9900;
+
+// Цвет не активного состояния
+$disabled-color-primary: #343a40;

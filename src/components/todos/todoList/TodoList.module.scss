@@ -1,7 +1,20 @@
 @import '@/styles/main';
 
 .list {
+  @include scroll-1;
+  justify-self: center;
   display: grid;
   gap: 0.5em;
   padding: 0.5em;
+
+  width: 30vw;
+  max-height: 100dvh;
+
+  padding-bottom: 5em;
+  transition: all 0.3s linear;
+  scroll-snap-type: y mandatory;
+
+  @include respond(tab-land) {
+    width: 100vw;
+  }
 }

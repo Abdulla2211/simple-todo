@@ -1,6 +1,7 @@
 @import '@/styles/main';
 
 .nav {
+  @include fade-in;
   background-color: transparent;
   position: absolute;
   width: 100%;

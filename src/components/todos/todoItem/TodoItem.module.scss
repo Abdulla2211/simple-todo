@@ -7,6 +7,8 @@
 
   transition: all 0.3s linear;
 
+  scroll-snap-align: center;
+
   &:hover {
     @media #{$mouse-device} {
       @include border-shadow-1;

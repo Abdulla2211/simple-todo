@@ -11,7 +11,7 @@
   height: 100%;
   display: grid;
   align-content: end;
-  // justify-content: center;
+  justify-content: center;
 }
 
 .content {
@@ -19,7 +19,7 @@
   text-align: center;
   z-index: 2;
   height: 100%;
-  width: 100vw;
+  min-width: 30vw;
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
@@ -28,6 +28,10 @@
   border-top-left-radius: 1em;
 
   background-color: $bg-color-white-1;
+
+  @include respond(tab-land) {
+    width: 100vw;
+  }
 
   .head {
     padding: 0.4em 0.2em;
@@ -83,7 +87,7 @@
 
   .body {
     @include scroll-1;
-    height: 50vh;
+    min-height: 30vh;
     width: 100%;
   }
 }
